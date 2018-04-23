@@ -13,7 +13,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../iron-icon/iron-icon.html">
 <link rel="import" href="../iron-icons/iron-icons.html">
 <link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../paper-dialog/paper-dialog.html">
 <link rel="import" href="../login-fire/login-fire.html">
+<link rel="import" href="../paper-dialog-behavior/paper-dialog-behavior.html">
 
 
 <dom-module id="na-login">
@@ -34,22 +36,30 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         @apply --layout-center-center;
       }
 
+      paper-dialog {
+        padding: 40px 80px;
+      }
+
       :host([signed-in]) {
         opacity: 0;
         pointer-events: none;
       }
 
-      login-fire-button > * {
-        text-transform: none;
-      }
+
+      
     </style>
 
-    <login-fire-form 
-      app-name="disciply-alpha" 
-      no-toggleable-password 
-      reenter-password 
-      show-sign-up>
-    </login-fire-form>
+      <paper-dialog 
+        with-backdrop center><h3>Login</h3>
+        <paper-dialog-scrollable>
+          <login-fire-form 
+            app-name="disciply-alpha" 
+            no-toggleable-password 
+            reenter-password 
+            show-sign-up>
+          </login-fire-form>
+        </paper-dialog-scrollable>
+      </paper-dialog>
 
   </template>
   <script>
