@@ -13,6 +13,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../iron-icon/iron-icon.html">
 <link rel="import" href="../iron-icons/iron-icons.html">
 <link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../login-fire/login-fire.html">
+
 
 <dom-module id="na-login">
   <template>
@@ -26,7 +28,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         background-color: var(--paper-green-500);
         transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 1;
-        color: var(--paper-purple-50);
+        color: var(--paper-green-50);
 
         @apply --layout;
         @apply --layout-center-center;
@@ -37,15 +39,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         pointer-events: none;
       }
 
-      paper-button > * {
-        vertical-align: middle;
+      login-fire-button > * {
         text-transform: none;
       }
     </style>
-    <paper-button on-tap="signIn" disabled="[[disabled]]">
-      <iron-icon icon="account-circle"></iron-icon>
-      <span>Sign in with Google</span>
-    </paper-button>
+
+    <login-fire-form 
+      app-name="disciply-alpha" 
+      no-toggleable-password 
+      reenter-password 
+      show-sign-up>
+    </login-fire-form>
+
   </template>
   <script>
     Polymer({

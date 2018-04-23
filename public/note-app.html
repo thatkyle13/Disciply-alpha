@@ -1,6 +1,7 @@
 <link rel="import" href="bower_components/note-app-elements/na-elements.html">
 <link rel="import" href="bower_components/app-storage/app-indexeddb-mirror/app-indexeddb-mirror.html">
 <link rel="import" href="bower_components/polymerfire/polymerfire.html">
+<link rel="import" href="bower_components/login-fire/login-fire-button.html">
 
 <dom-module id="note-app">
   <template>
@@ -19,8 +20,6 @@
       signed-in="{{signedIn}}"
       user="{{user}}">
     </firebase-auth>
-
-
 
     <firebase-document
       id="document"

@@ -17,7 +17,7 @@
       <meta name="application-name" content="Notes">
       <link rel="icon"
             sizes="192x192"
-            href="bower_components/note-app/common/images/icon-4x.png">
+            href="bower_components/note-app-elements/images/icon-4x.png">
 
     <!-- Dependencies -->
       <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
@@ -37,12 +37,15 @@
         default-cache-strategy="networkFirst">
     </platinum-sw-cache>
     </platinum-sw-register>
+    
       <firebase-app
       name="disciply-alpha"
       api-key="AIzaSyAoVyuHGrCxsXhhPNZfcMDduYNIyU_p8wU"
       auth-domain= "disciply-alpha.firebaseapp.com"
       database-url= "https://disciply-alpha.firebaseio.com">
       </firebase-app>
-      <note-app></note-app>
+
+      <note-app>
+      </note-app>
   </body>
 </html>
