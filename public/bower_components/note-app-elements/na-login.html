@@ -16,6 +16,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../paper-dialog/paper-dialog.html">
 <link rel="import" href="../login-fire/login-fire.html">
 <link rel="import" href="../paper-dialog-behavior/paper-dialog-behavior.html">
+<link rel="import" href="../neon-animation/web-animations.html">
+<link rel="import" href="../neon-animation/animations/scale-up-animation.html">
+<link rel="import" href="../neon-animation/animations/scale-down-animation.html">
 
 
 <dom-module id="na-login">
@@ -44,23 +47,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </style>
       
       <paper-button 
-        data-dialog="meep"
-        raised onclick="meep.open()">Login or Sign up
+        data-dialog="login"
+        raised onclick="login.open()">Login or Sign up
       </paper-button>
-
-      <paper-dialog 
-        id="meep"
-        with-backdrop
-        center>
-        <paper-dialog-scrollable>
-          <login-fire-form
-            app-name="disciply-alpha" 
-            no-toggleable-password 
-            reenter-password 
-            show-sign-up>
-          </login-fire-form>
-        </paper-dialog-scrollable>
-      </paper-dialog>
 
   </template>
   <script>

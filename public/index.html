@@ -8,6 +8,10 @@
       body {
         margin: 0;
       }
+      paper-dialog {
+        padding: 40px 80px;
+        border-radius: 10%;
+      }
     </style>
     <!-- manifest.json -->
     <link rel="manifest" href="manifest.json">
@@ -47,5 +51,21 @@
 
       <note-app>
       </note-app>
+
+    <paper-dialog 
+      id="login" 
+      entry-animation="scale-up-animation"
+      exit-animation="scale-down-animation"
+      with-backdrop
+      center>
+      <paper-dialog-scrollable>
+        <login-fire-form
+          app-name="disciply-alpha" 
+          debug
+          reenter-password 
+          show-sign-up>
+        </login-fire-form>
+      </paper-dialog-scrollable>
+    </paper-dialog>
   </body>
 </html>
