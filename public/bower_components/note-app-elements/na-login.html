@@ -36,23 +36,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         @apply --layout-center-center;
       }
 
-      paper-dialog {
-        padding: 40px 80px;
-      }
-
       :host([signed-in]) {
         opacity: 0;
         pointer-events: none;
       }
 
-
-      
     </style>
+      
+      <paper-button 
+        data-dialog="meep"
+        raised onclick="meep.open()">Login or Sign up
+      </paper-button>
 
       <paper-dialog 
-        with-backdrop center><h3>Login</h3>
+        id="meep"
+        with-backdrop
+        center>
         <paper-dialog-scrollable>
-          <login-fire-form 
+          <login-fire-form
             app-name="disciply-alpha" 
             no-toggleable-password 
             reenter-password 
