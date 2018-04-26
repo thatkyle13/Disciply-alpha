@@ -1,4 +1,6 @@
 *.log
 .vscode
 /public/bower_components/
+!/public/bower_components/login-fire/
+!/public/bower_componenters/note-app-elements/
 y
