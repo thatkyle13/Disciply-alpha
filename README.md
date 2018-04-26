@@ -1,6 +1,6 @@
 # < Disciply >
 
-$$ this is an alpha version of disciply you are welcome to contribute
+this is an alpha version of disciply you are welcome to contribute
 
 ### download all the components
 ```
